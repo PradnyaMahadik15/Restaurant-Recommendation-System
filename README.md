@@ -7,17 +7,17 @@
 
 *Dish_Dash* is an intelligent, web-based recommendation engine designed to curate personalized dining experiences in Bangalore. 
 
-Moving beyond generic top-10 lists, this project leverages **Natural Language Processing (NLP)** to analyze unstructured customer reviews and quantitative metrics (cuisine type, cost, ratings). By processing these features through a custom TF-IDF vectorization engine, it provides highly accurate, taste-matched restaurant recommendations instantly.
+Moving beyond generic top-10 lists, this project leverages Natural Language Processing (NLP) to analyze unstructured customer reviews and quantitative metrics (cuisine type, cost, ratings). By processing these features through a custom TF-IDF vectorization engine, it provides highly accurate, taste-matched restaurant recommendations instantly.
 
 ---
 
 🚀 Key Features
 
-*⚡ Real-Time Engine:* Optimized Flask backend computes cosine similarity across thousands of data points in milliseconds.
-*🔍 Smart Auto-Complete:** Features a dynamic, AJAX-powered search bar that fetches database matches as the user types, complete with full keyboard navigation (Up/Down/Enter).
-*🧠 Advanced NLP Model:** Powered by Scikit-Learn's `TfidfVectorizer` to extract semantic meaning from customer reviews, ignoring irrelevant stop words via `NLTK`.
-*🎨 Premium UI/UX:** A sleek, modern "Light Mode" interface built entirely with **Tailwind CSS**, featuring custom-styled data dashboards, hover states, and soft glassmorphism.
-*📊 Pre-Trained Efficiency:** The heavy mathematical matrix is pre-compiled via Jupyter Notebook into a `.pkl` file, resulting in zero-lag user queries.
+⚡ Real-Time Engine: Optimized Flask backend computes cosine similarity across thousands of data points in milliseconds.
+🔍 Smart Auto-Complete:* Features a dynamic, AJAX-powered search bar that fetches database matches as the user types, complete with full keyboard navigation (Up/Down/Enter).
+🧠 Advanced NLP Model:* Powered by Scikit-Learn's TfidfVectorizer to extract semantic meaning from customer reviews, ignoring irrelevant stop words via NLTK.
+🎨 Premium UI/UX:* A sleek, modern "Light Mode" interface built entirely with *Tailwind CSS*, featuring custom-styled data dashboards, hover states, and soft glassmorphism.
+📊 Pre-Trained Efficiency:* The heavy mathematical matrix is pre-compiled via Jupyter Notebook into a .pkl file, resulting in zero-lag user queries.
 
 ---
 
@@ -25,39 +25,40 @@ Moving beyond generic top-10 lists, this project leverages **Natural Language Pr
 
 This architecture strictly adheres to the SmartInternz workspace requirements for model training and deployment:
 
-```text
+text
 Restaurant_Recommendation_System/
 │
 ├── Dataset/
-│   └── zomato.csv[Kaggle link]                       # Raw data From Kaggle
+│   └── Dataset.txt                         # Compressed raw dataset
 │
 ├── Document/
-│   └── RESTAURANT_RECOMMENDATION_SYSTEM.docx  # Final Project Report
+│   └── RESTAURANT_RECOMMENDATION_SYSTEM.docx                   # Final Project Report
 │
 ├── Model/
-│   └── Restaurant_Recommendation_System.ipynb # Backup of analysis notebook
+│   └── Restaurant_Recommendation_System.ipynb               # Backup of analysis notebook
 │
 ├── Flask/
-│   ├── static/                                # CSS/JS assets
-│   ├── templates/
-│   │   ├── index.html                         # Premium landing page
-│   │   ├── web.html                           # Auto-complete search interface
-│   │   └── result.html                        # Formatted data output dashboard
+│   │   ├── templates/
+│   │              ├── index.html                         # Premium landing page
+│   │              ├── web.html                           # Auto-complete search interface
+│   │              └── result.html                        # Formatted data output dashboard
 │   │
-│   ├── app1.py                                # Main Flask Web Server
-│   ├── Restaurant_Recommendation_System.ipynb # Primary Training Script (EDA & Model)
-│   ├── zomato.csv                             # Extracted raw dataset
-│   ├── restaurant.pkl                         # Trained Model Matrix (Auto-generated)
-│   └── restaurant1.csv                        # Cleaned Dataset (Auto-generated)
-│
+│   ├── app1.py                                                                                            # Main Flask Web Server
+│   ├── Restaurant_Recommendation_System.ipynb                # Primary Training Script (EDA & Model)
+│    |
+│   │   *(Note: The following files are ignored via .gitignore due to size limits)*
+│   ├── zomato.csv                             # Extracted raw dataset (Needs to be downloaded)
+│   ├── restaurant.pkl                         # Trained Model Matrix (Generated via Notebook)
+│   └── restaurant1.csv                        # Cleaned Dataset (Generated via Notebook)
+ |
 ├── requirements.txt               
-└── README.md  
+ └── README.md  
 
  ⚙️ Installation & Setup
 
  1. Prerequisites
 Ensure you have Python installed on your system. Install all required dependencies using:
-```pip install -r requirements.txt
+pip install -r requirements.txt
 
  2. Train the Model (Jupyter Notebook)
 Before booting the web server, you must clean the raw dataset and generate the trained machine learning matrix.
@@ -74,7 +75,7 @@ Verify that restaurant.pkl and restaurant1.csv have successfully generated in yo
 
  3. Run the Application
 Start the local server by executing the main Flask application:
-```python app1.py
+python app1.py
 
  4. Access the Interface
 Open your preferred web browser and navigate to the local server address:
@@ -92,4 +93,6 @@ Data Presentation: The Pandas DataFrame is formatted dynamically into a clean, T
 📝 License & Credits
 This project is developed for educational purposes as part of the SmartInternz Applied Data Science Internship Program.
 
-Developed by Pradnya Ajit Mahadik
+
+Developed by 
+ Pradnya Ajit Mahadik
